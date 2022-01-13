@@ -34,7 +34,7 @@ This will create a new directory in the `.xlwings` directory.
 ## On initial Installation
 Now that the config file is generated, run the following script in the *Anaconda Powershell*:
 ```powershell
-python .xlwings\CopyNPaste\set_config.py 
+python .xlwings\CopyNPaste\set_conf.py 
 ```
 
 ## For updates 
@@ -43,7 +43,7 @@ If you have re-pulled from the repository, then will need to redo the config set
 ```powershell
 rm -fr .xlwings\xlwings.conf
 xlwings config generate
-python .xlwings\CopyNPaste\set_config.py 
+python .xlwings\CopyNPaste\set_conf.py 
 
 ```
 
