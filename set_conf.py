@@ -1,6 +1,4 @@
-import os 
 from pathlib import Path 
-import sys
 
 def main():
 	xl_wings_path = Path.home().joinpath(".xlwings")

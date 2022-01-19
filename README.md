@@ -65,6 +65,40 @@ Now, whenever you have a .xlsm workbook, you simply need to select the **Import 
 
 ## Functions 
 
-##### copy_and_paste
-This function receives a variable number of arguments. 
+#### create_array
+1. Arguments
+	- **n_col**: This is the column vector of the number of times the accompanied range(s) is to be copied 
+	- **args**: The next argument can be a single or multiple list of columns of equal length to the **n_col** argument. 
 
+2. Example:
+
+| A | B | C | D       | 
+| --- | ---| ---- | ----      |
+| 1 | red | cat    |  apple     | 
+| 2 | blue | dog    |  orange    |
+
+Running `create_array(A1:A2,B1:B2,D1:D2)` would result in:
+| B |  D | 
+| ---| ---- |  
+| red |  apple | 
+| blue | orange|
+| blue | orange|
+
+
+#### create_array_continuous
+1. Arguments 
+	- **n_col**: This is the column vector of the number of times the accompanied range(s) is to be copied 
+	- **cell_range**: This is a continuous range of columns of equal length to the **n_col** argument. 
+2. 
+| A | B | C | D       | 
+| --- | ---| ---- | ----      |
+| 1 | red | cat    |  apple     | 
+| 2 | blue | dog    |  orange    |
+
+Running `create_array_continous(A1:A2,B1:D2)` would result in: 
+
+| B | C | D       | 
+|  ---| ---- | ----      |
+| red | cat    |  apple     | 
+| blue | dog    |  orange    |
+| blue | dog    |  orange    |
