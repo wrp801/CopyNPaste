@@ -41,10 +41,12 @@ python .xlwings\CopyNPaste\set_conf.py
 If you have re-pulled from the repository, then will need to redo the config setup. That can be done by deleting the initial file, generating it again, then running the python script once more. Run the following to do so: 
 
 ```powershell
-rm -fr .xlwings\xlwings.conf
+cd .xlwings\CopyNPaste 
+git pull 
+cd ../ 
+rm .xlwings.conf
 xlwings config generate
-python .xlwings\CopyNPaste\set_conf.py 
-
+python CopyNPaste\set_conf.py 
 ```
 
 This will automatically configure the settings to import the user defined functions (UDF's) into the Excel Workbook. 
